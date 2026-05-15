@@ -76,14 +76,14 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-primary/30 transition-all duration-300 text-left group"
+                className="w-full p-6 bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/30 transition-all duration-300 text-left group"
               >
                 <div className="flex items-center justify-between gap-4">
                   <h3 className="text-xl font-bold group-hover:text-primary transition-colors flex-1">
                     {faq.question}
                   </h3>
                   
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-10 h-10 bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                     {openIndex === index ? (
                       <Minus size={20} className="text-primary" />
                     ) : (
@@ -120,7 +120,7 @@ export default function FAQ() {
           <p className="text-gray-400 mb-4">¿Tienes más preguntas?</p>
           <a
             href="#contact"
-            className="inline-block px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+            className="inline-block px-8 py-4 bg-white/10 hover:bg-primary/20 border border-white/20 hover:border-primary/50 font-oswald font-bold uppercase tracking-[0.15em] text-sm transition-all duration-300 hover:scale-105"
           >
             Contáctanos
           </a>

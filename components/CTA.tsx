@@ -9,8 +9,8 @@ interface CTAProps {
 
 export default function CTA({ onOpenCaseStudy }: CTAProps) {
   return (
-    <section className="py-48 bg-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,0,0,0.05),transparent_70%)]" />
+    <section id="contact" className="py-48 bg-black relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(240,173,5,0.06),transparent_70%)]" />
       
       <div className="container mx-auto px-8 relative z-10">
         <motion.div

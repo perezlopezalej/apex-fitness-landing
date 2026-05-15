@@ -28,7 +28,7 @@
   }
   
   .glow {
-    box-shadow: 0 0 40px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(240, 173, 5, 0.3);
   }
 
   /* Grain effect for backgrounds */
@@ -64,10 +64,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: #F0AD05;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #CC0000;
+  background: #D4960A;
 }

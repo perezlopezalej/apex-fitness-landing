@@ -40,8 +40,8 @@ const trainers = [
 
 export default function Trainers() {
   return (
-    <section className="py-48 bg-dark relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,0,0,0.03),transparent_60%)]" />
+    <section id="trainers" className="py-48 bg-dark relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(240,173,5,0.04),transparent_60%)]" />
       
       <div className="container mx-auto px-8 relative z-10">
         <motion.div
@@ -84,7 +84,7 @@ export default function Trainers() {
                   />
                   <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300" />
                   
-                  <div className="absolute top-4 right-4 w-12 h-12 bg-primary flex items-center justify-center group-hover:rotate-180 transition-transform duration-500">
+                  <div className="absolute top-4 right-4 w-12 h-12 bg-primary flex items-center justify-center transition-transform duration-500">
                     <Award size={24} className="text-white" />
                   </div>
                 </div>

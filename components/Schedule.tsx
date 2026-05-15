@@ -70,11 +70,11 @@ const schedule = [
 
 export default function Schedule() {
   return (
-    <section className="py-48 bg-darker relative overflow-hidden">
+    <section id="schedule" className="py-48 bg-darker relative overflow-hidden">
       {/* Grid background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'linear-gradient(rgba(255,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,0,0,0.1) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(240,173,5,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(240,173,5,0.07) 1px, transparent 1px)',
           backgroundSize: '50px 50px'
         }} />
       </div>
@@ -165,13 +165,14 @@ export default function Schedule() {
             <p className="font-oswald text-gray-400 mb-8 uppercase tracking-wider text-sm">
               Reserva tu lugar en la app o llega 15 minutos antes
             </p>
-            <motion.button 
+            <motion.a
+              href="#pricing"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-16 py-6 bg-primary hover:bg-white text-white hover:text-black font-oswald font-bold uppercase tracking-[0.2em] text-sm transition-all duration-300"
+              className="inline-block px-16 py-6 bg-primary hover:bg-white text-white hover:text-black font-oswald font-bold uppercase tracking-[0.2em] text-sm transition-all duration-300"
             >
-              Descargar App
-            </motion.button>
+              Ver Membresías
+            </motion.a>
           </motion.div>
         </div>
       </div>

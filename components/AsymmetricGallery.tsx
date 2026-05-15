@@ -14,7 +14,7 @@ export default function AsymmetricGallery() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 100])
 
   return (
-    <section ref={ref} className="py-48 bg-black overflow-hidden">
+    <section id="gallery" ref={ref} className="py-48 bg-black overflow-hidden">
       <div className="container mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

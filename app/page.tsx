@@ -29,6 +29,8 @@ export default function Home() {
       <ImageSection />
       <SectionDivider variant="dots" />
       <Benefits />
+      <SectionDivider variant="dots" />
+      <Testimonials />
       <SectionDivider />
       <Pricing />
       <SectionDivider variant="arrow" />
@@ -39,8 +41,6 @@ export default function Home() {
       <Facilities />
       <SectionDivider variant="dots" />
       <Schedule />
-      <SectionDivider />
-      <Testimonials />
       <SectionDivider />
       <FAQ />
       <SectionDivider variant="dots" />

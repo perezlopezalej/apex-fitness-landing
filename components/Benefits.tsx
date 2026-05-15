@@ -38,7 +38,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-48 bg-dark relative overflow-hidden">
+    <section id="benefits" className="py-48 bg-dark relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight, LayoutGrid } from 'lucide-react'
 import { useRef } from 'react'
 
 export default function Hero() {
@@ -80,14 +80,15 @@ export default function Hero() {
               </span>
             </motion.a>
             
-            <motion.button 
+            <motion.a
+              href="#gallery"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group px-16 py-7 bg-transparent border-2 border-white text-white font-oswald font-bold text-xl transition-all duration-300 flex items-center gap-4 uppercase tracking-[0.2em] hover:bg-white hover:text-black"
             >
-              <Play size={24} />
-              Ver Tour
-            </motion.button>
+              <LayoutGrid size={22} />
+              Ver Instalaciones
+            </motion.a>
           </motion.div>
 
         </div>

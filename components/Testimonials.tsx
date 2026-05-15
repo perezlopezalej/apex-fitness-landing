@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: 'Laura García',
     role: 'Ejecutiva de Marketing',
-    image: 'LG',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop&face',
     text: 'Perdí 18kg en 6 meses. El apoyo de mi entrenador y el plan nutricional fueron clave. Nunca pensé que podría lograr esta transformación.',
     rating: 5,
     result: '-18kg en 6 meses',
@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: 'Roberto Silva',
     role: 'Ingeniero de Software',
-    image: 'RS',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop',
     text: 'Después de años sedentario, APEX cambió mi vida. El ambiente es motivador y los entrenadores realmente se preocupan por tu progreso.',
     rating: 5,
     result: '+15kg masa muscular',
@@ -23,7 +23,7 @@ const testimonials = [
   {
     name: 'María Fernández',
     role: 'Empresaria',
-    image: 'MF',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop',
     text: 'Las clases de yoga y el área de recuperación son excepcionales. Es mi escape diario del estrés. Un gimnasio verdaderamente premium.',
     rating: 5,
     result: 'Mejor calidad de vida',
@@ -31,7 +31,7 @@ const testimonials = [
   {
     name: 'David Morales',
     role: 'Fotógrafo',
-    image: 'DM',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
     text: 'Competí en mi primer CrossFit Open gracias al entrenamiento aquí. Sofia es increíble. El equipamiento es de nivel competitivo.',
     rating: 5,
     result: 'Top 10% regional',
@@ -39,7 +39,7 @@ const testimonials = [
   {
     name: 'Carmen López',
     role: 'Doctora',
-    image: 'CL',
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=200&auto=format&fit=crop',
     text: 'Como profesional de la salud, valoro el enfoque integral: ejercicio, nutrición y recuperación. APEX lo tiene todo. 100% recomendado.',
     rating: 5,
     result: 'Salud óptima',
@@ -47,7 +47,7 @@ const testimonials = [
   {
     name: 'Andrés Ruiz',
     role: 'Abogado',
-    image: 'AR',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
     text: 'El horario 24/7 es perfecto para mi agenda impredecible. Instalaciones siempre limpias y el personal es extremadamente profesional.',
     rating: 5,
     result: 'Consistencia total',
@@ -89,10 +89,14 @@ export default function Testimonials() {
               <Quote className="absolute top-8 right-8 text-primary/30" size={40} />
               
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-16 h-16 bg-primary flex items-center justify-center text-xl font-bold text-white">
-                  {testimonial.image}
+                <div className="w-16 h-16 overflow-hidden flex-shrink-0 border border-white/10">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
                 </div>
-                
+
                 <div>
                   <h4 className="font-bold text-lg">{testimonial.name}</h4>
                   <p className="text-sm text-gray-400">{testimonial.role}</p>

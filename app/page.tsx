@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
@@ -12,11 +15,14 @@ import Schedule from '@/components/Schedule'
 import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
+import CaseStudyModal from '@/components/CaseStudyModal'
 
 export default function Home() {
+  const [caseStudyOpen, setCaseStudyOpen] = useState(false)
+
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
-      <Navbar />
+      <Navbar onOpenCaseStudy={() => setCaseStudyOpen(true)} />
       <Hero />
       <Stats />
       <SectionDivider />
@@ -38,7 +44,8 @@ export default function Home() {
       <SectionDivider />
       <FAQ />
       <SectionDivider variant="dots" />
-      <CTA />
+      <CTA onOpenCaseStudy={() => setCaseStudyOpen(true)} />
+      <CaseStudyModal isOpen={caseStudyOpen} onClose={() => setCaseStudyOpen(false)} />
     </main>
   )
 }

@@ -1,9 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Check, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react'
+import { ArrowRight, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react'
 
-export default function CTA() {
+interface CTAProps {
+  onOpenCaseStudy?: () => void
+}
+
+export default function CTA({ onOpenCaseStudy }: CTAProps) {
   return (
     <section className="py-48 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,0,0,0.05),transparent_70%)]" />
@@ -147,11 +151,20 @@ export default function CTA() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center mt-16 pt-12 border-t border-white/5"
+            className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-16 pt-12 border-t border-white/5"
           >
             <p className="text-gray-600 text-xs uppercase tracking-widest">
               © 2026 APEX FITNESS. TODOS LOS DERECHOS RESERVADOS.
             </p>
+            {onOpenCaseStudy && (
+              <button
+                onClick={onOpenCaseStudy}
+                className="group flex items-center gap-2 text-gray-700 hover:text-white transition-colors text-xs uppercase tracking-[0.2em] font-oswald"
+              >
+                Ver Case Study
+                <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+            )}
           </motion.div>
         </motion.div>
       </div>

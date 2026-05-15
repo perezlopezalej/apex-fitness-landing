@@ -4,7 +4,11 @@ import { motion } from 'framer-motion'
 import { Menu, X, Dumbbell } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
-export default function Navbar() {
+interface NavbarProps {
+  onOpenCaseStudy?: () => void
+}
+
+export default function Navbar({ onOpenCaseStudy }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -64,7 +68,17 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-6">
+            {onOpenCaseStudy && (
+              <motion.button
+                onClick={onOpenCaseStudy}
+                whileHover={{ scale: 1.03 }}
+                className="relative text-gray-600 hover:text-white transition-colors text-xs uppercase tracking-[0.2em] font-oswald font-medium group"
+              >
+                [ Case Study ]
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-300" />
+              </motion.button>
+            )}
             <motion.a
               href="#pricing"
               whileHover={{ scale: 1.05 }}
@@ -102,6 +116,14 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+            {onOpenCaseStudy && (
+              <button
+                onClick={() => { setIsMobileMenuOpen(false); onOpenCaseStudy() }}
+                className="block text-left text-sm text-gray-500 hover:text-white transition-colors py-2 uppercase tracking-[0.2em] font-oswald"
+              >
+                [ Case Study ]
+              </button>
+            )}
             <a
               href="#pricing"
               onClick={() => setIsMobileMenuOpen(false)}

@@ -42,9 +42,9 @@ export default function Navbar({ onOpenCaseStudy }: NavbarProps) {
       <div className="container mx-auto px-8">
         <div className="flex items-center justify-between h-24">
           <a href="#hero" className="flex items-center gap-3 group">
-            <motion.div 
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.5 }}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
               className="w-12 h-12 bg-primary flex items-center justify-center"
             >
               <Dumbbell size={28} className="text-white" />

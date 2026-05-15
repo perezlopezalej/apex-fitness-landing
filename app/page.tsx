@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
-import SectionDivider from '@/components/SectionDivider'
 import Benefits from '@/components/Benefits'
 import ImageSection from '@/components/ImageSection'
 import Pricing from '@/components/Pricing'
@@ -25,25 +24,15 @@ export default function Home() {
       <Navbar onOpenCaseStudy={() => setCaseStudyOpen(true)} />
       <Hero />
       <Stats />
-      <SectionDivider />
       <ImageSection />
-      <SectionDivider variant="dots" />
       <Benefits />
-      <SectionDivider variant="dots" />
       <Testimonials />
-      <SectionDivider />
       <Pricing />
-      <SectionDivider variant="arrow" />
       <AsymmetricGallery />
-      <SectionDivider />
       <Trainers />
-      <SectionDivider />
       <Facilities />
-      <SectionDivider variant="dots" />
       <Schedule />
-      <SectionDivider />
       <FAQ />
-      <SectionDivider variant="dots" />
       <CTA onOpenCaseStudy={() => setCaseStudyOpen(true)} />
       <CaseStudyModal isOpen={caseStudyOpen} onClose={() => setCaseStudyOpen(false)} />
     </main>

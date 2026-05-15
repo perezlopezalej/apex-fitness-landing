@@ -38,7 +38,7 @@ const facilities = [
 
 export default function Facilities() {
   return (
-    <section className="py-48 bg-black relative overflow-hidden">
+    <section id="facilities" className="py-36 bg-black relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
@@ -84,7 +84,7 @@ export default function Facilities() {
               <div className="relative z-10">
                 {/* Icon */}
                 <div className="mb-8 relative">
-                  <div className="w-20 h-20 border-2 border-primary/30 flex items-center justify-center group-hover:border-primary transition-colors duration-300 group-hover:rotate-180 transition-transform duration-700">
+                  <div className="w-16 h-16 border border-primary/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-all duration-300">
                     <facility.icon size={36} className="text-primary" />
                   </div>
                 </div>
@@ -145,13 +145,14 @@ export default function Facilities() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center mt-12"
           >
-            <motion.button 
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-16 py-6 bg-primary hover:bg-white text-white hover:text-black font-oswald font-bold uppercase tracking-[0.2em] text-sm transition-all duration-300"
+              className="inline-block px-16 py-6 bg-primary hover:bg-white text-white hover:text-black font-oswald font-bold uppercase tracking-[0.2em] text-sm transition-all duration-300"
             >
               Agenda una Visita
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

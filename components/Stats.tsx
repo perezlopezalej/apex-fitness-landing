@@ -45,7 +45,7 @@ function CountUpAnimation({ value, duration = 2000 }: { value: number; duration?
 
 export default function Stats() {
   return (
-    <section className="relative py-48 bg-black overflow-hidden">
+    <section className="relative py-24 bg-black overflow-hidden">
       {/* Red accent line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
       
@@ -57,20 +57,6 @@ export default function Stats() {
       </div>
 
       <div className="container mx-auto px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-32"
-        >
-          <h2 className="font-bebas text-8xl md:text-9xl mb-6 tracking-tight">
-            <span className="text-white">NÚMEROS QUE</span>{' '}
-            <span className="text-primary">HABLAN</span>
-          </h2>
-          <div className="w-32 h-1 bg-primary mx-auto" />
-        </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div

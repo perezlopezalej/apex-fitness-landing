@@ -70,7 +70,7 @@ const schedule = [
 
 export default function Schedule() {
   return (
-    <section id="schedule" className="py-48 bg-darker relative overflow-hidden">
+    <section id="schedule" className="py-36 bg-darker relative overflow-hidden">
       {/* Grid background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

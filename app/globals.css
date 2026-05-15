@@ -24,7 +24,10 @@
 
 @layer utilities {
   .text-gradient {
-    @apply text-primary;
+    background: linear-gradient(135deg, #F0AD05, #FCD34D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   .glow {

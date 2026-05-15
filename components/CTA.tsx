@@ -9,7 +9,7 @@ interface CTAProps {
 
 export default function CTA({ onOpenCaseStudy }: CTAProps) {
   return (
-    <section id="contact" className="py-48 bg-black relative overflow-hidden">
+    <section id="contact" className="py-40 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(240,173,5,0.06),transparent_70%)]" />
       
       <div className="container mx-auto px-8 relative z-10">
@@ -41,18 +41,45 @@ export default function CTA({ onOpenCaseStudy }: CTAProps) {
 
             <div className="flex flex-wrap justify-center gap-8 mb-16">
               <div className="flex items-center gap-3 text-gray-300">
-                <div className="w-2 h-2 bg-primary rotate-45" />
+                <div className="w-2 h-2 bg-white/30 rotate-45" />
                 <span className="text-sm uppercase tracking-wider">Sin compromiso anual</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <div className="w-2 h-2 bg-primary rotate-45" />
+                <div className="w-2 h-2 bg-white/30 rotate-45" />
                 <span className="text-sm uppercase tracking-wider">3 días de prueba gratis</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <div className="w-2 h-2 bg-primary rotate-45" />
+                <div className="w-2 h-2 bg-white/30 rotate-45" />
                 <span className="text-sm uppercase tracking-wider">Evaluación gratuita</span>
               </div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="max-w-md mx-auto mb-12 w-full"
+            >
+              <div className="grid grid-cols-2 gap-3">
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  className="col-span-2 px-5 py-4 bg-white/5 border border-white/10 focus:border-primary outline-none text-white placeholder:text-gray-600 font-oswald uppercase tracking-wider text-sm transition-colors"
+                />
+                <input
+                  type="tel"
+                  placeholder="WhatsApp"
+                  className="px-5 py-4 bg-white/5 border border-white/10 focus:border-primary outline-none text-white placeholder:text-gray-600 font-oswald uppercase tracking-wider text-sm transition-colors"
+                />
+                <select className="px-5 py-4 bg-dark border border-white/10 focus:border-primary outline-none text-gray-600 font-oswald uppercase tracking-wider text-sm transition-colors cursor-pointer">
+                  <option value="">Plan de interés</option>
+                  <option value="basico" className="text-white bg-black">Básico — $39</option>
+                  <option value="pro" className="text-white bg-black">Pro — $69</option>
+                  <option value="premium" className="text-white bg-black">Premium — $99</option>
+                </select>
+              </div>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -47,20 +47,19 @@ export default function FAQ() {
   }
 
   return (
-    <section className="py-48 bg-black relative">
+    <section className="py-32 bg-black relative">
       <div className="container mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-32"
+          className="text-center mb-20"
         >
-          <h2 className="font-bebas text-8xl md:text-9xl mb-6 tracking-tight">
+          <h2 className="font-bebas text-6xl md:text-7xl mb-6 tracking-tight">
             PREGUNTAS <span className="text-primary">FRECUENTES</span>
           </h2>
-          <div className="w-32 h-1 bg-primary mx-auto mb-8" />
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
+          <p className="text-lg text-gray-500 max-w-xl mx-auto font-light">
             Todo lo que necesitas saber antes de empezar
           </p>
         </motion.div>

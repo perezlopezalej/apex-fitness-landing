@@ -40,7 +40,7 @@ const trainers = [
 
 export default function Trainers() {
   return (
-    <section id="trainers" className="py-48 bg-dark relative overflow-hidden">
+    <section id="trainers" className="py-36 bg-dark relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(240,173,5,0.04),transparent_60%)]" />
       
       <div className="container mx-auto px-8 relative z-10">

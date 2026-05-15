@@ -53,7 +53,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-48 bg-black">
+    <section id="pricing" className="py-40 bg-black">
       
       <div className="container mx-auto px-8">
         <motion.div
@@ -107,23 +107,24 @@ export default function Pricing() {
               <ul className="space-y-6 mb-14">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-4">
-                    <Check className="text-primary mt-0.5 flex-shrink-0" size={20} />
+                    <Check className={`mt-0.5 flex-shrink-0 ${plan.popular ? 'text-primary' : 'text-white/40'}`} size={18} />
                     <span className="text-gray-400 text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <motion.button
+              <motion.a
+                href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full py-6 font-oswald font-bold text-lg uppercase tracking-[0.2em] transition-all duration-300 ${
+                className={`block w-full py-6 font-oswald font-bold text-lg uppercase tracking-[0.2em] transition-all duration-300 text-center ${
                   plan.popular
                     ? 'bg-primary hover:bg-white text-white hover:text-black'
                     : 'bg-transparent hover:bg-primary border-2 border-white/20 hover:border-primary text-white'
                 }`}
               >
                 {plan.cta}
-              </motion.button>
+              </motion.a>
             </motion.div>
           ))}
         </div>
